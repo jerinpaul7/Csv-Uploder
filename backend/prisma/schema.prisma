@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model stock {
+  id            Int     @id @default(autoincrement())
+  ItemName      String
+  SKU           String
+  Category      String
+  Unit          String
+  CurrentStock  Float
+  ReorderLevel  Float
+  Status        String
+}
+
