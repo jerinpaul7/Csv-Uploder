@@ -1,0 +1,132 @@
+/* globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Global Styles === */
+:root {
+  /* CHANGE: Updated background to a soft, dark color for high contrast */
+  --background: #1a2d5a; /* Slate-900 */
+  --foreground: #f8fafc; /* Slate-50 */
+  --primary: #3b82f6; /* Blue-500 */
+  --primary-hover: #2563eb; /* Blue-600 */
+  --border: #475569; /* Slate-600 */
+  /* CHANGE: Use a semi-transparent white for the card background */
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --success-bg: #15803d; /* Green-700 */
+  --error-bg: #dc2626; /* Red-600 */
+  --success-text: #dcfce7; /* Green-100 */
+  --error-text: #fee2e2; /* Red-100 */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Set a slightly different dark background for the 'dark' scheme */
+    --background: #131212;
+    --foreground: #ededed;
+    --card-bg: rgba(17, 24, 40, 0.75); /* Darker semi-transparent blue/gray */
+    --border: #374151;
+    --success-bg: #064e3b;
+    --error-bg: #7f1d1d;
+    --success-text: #d1fae5;
+    --error-text: #fee2e2;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+/* === Page Container === */
+main {
+  /* No styles here */
+}
+
+main:hover {
+  /* No styles here */
+}
+
+/* === Headings === */
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--foreground);
+}
+
+/* === File Input === */
+/* CHANGE: Updated input colors to match the new dark theme */
+input[type="file"] {
+  display: block;
+  width: 100%;
+  border: 2px solid var(--border);
+  background-color: var(--card-bg); /* Use card background for input area */
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  color: var(--foreground);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+input[type="file"]:hover {
+  border-color: var(--primary);
+  background-color: rgba(60, 110, 160, 0.1); /* Subtle blue hover */
+}
+
+/* === Button (remains the same) === */
+button {
+  width: 100%;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.02);
+}
+
+/* === Message Box (updated text colors) === */
+.message {
+  margin-top: 1.25rem;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.message.success {
+  background-color: var(--success-bg);
+  color: var(--success-text);
+  border: 1px solid var(--success-bg);
+}
+
+.message.error {
+  background-color: var(--error-bg);
+  color: var(--error-text);
+  border: 1px solid var(--error-bg);
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
