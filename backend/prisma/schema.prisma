@@ -10,7 +10,7 @@ datasource db {
 model stock {
   id            Int     @id @default(autoincrement())
   ItemName      String
-  SKU           String
+  SKU           String   @unique
   Category      String
   Unit          String
   CurrentStock  Float

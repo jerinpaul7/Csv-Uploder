@@ -1,8 +1,0 @@
-ItemName,SKU,Category,Unit,Current Stock,Reorder Level,Status
-Gold Bullion (24k),RM-G24-001,Raw Materials,Grams,1500.5,500,In Stock
-"Diamond (VS1, 0.5 ct)",GS-DVS1-050,Gemstones,Pieces,50.0,20,In Stock
-"Jump Rings (14k Gold, 4mm)",FN-JR14-004,Findings,Pieces,85.0,100,Low Stock
-Silver Sheet (925),RM-S925-001,Raw Materials,Grams,5000.0,1000,In Stock
-Lobster Clasps (18k Gold),FN-LC18-001,Findings,Pieces,0.0,50,Out of Stock
-"Emerald (Natural, 1.0 ct)",GS-EM1-100,Gemstones,Pieces,15.0,10,In Stock
-Diamond Tennis Bracelet,FG-BR-012,Finished Goods,Pieces,8.0,5,In Stock
